@@ -23,7 +23,7 @@
 ## Install & Upgrade
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/feizezadeh/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/feizezadeh/x-ui/master/install.sh)
 ```
 
 ## Install Custom Version
@@ -31,7 +31,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/feizezadeh/master/ins
 To install your desired version, add the version to the end of the installation command. e.g., ver `v2.3.1`:
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/feizezadeh/master/install.sh) v2.3.1
+bash <(curl -Ls https://raw.githubusercontent.com/feizezadeh/x-ui/master/install.sh) v2.3.1
 ```
 
 ## SSL Certificate
