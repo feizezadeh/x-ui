@@ -67,6 +67,10 @@ elif [[ "${release}" == "debian" ]]; then
     if [[ ${os_version} -lt 11 ]]; then
         echo -e "${red} Please use Debian 11 or higher ${plain}\n" && exit 1
     fi
+elif [[ "${release}" == "elementary" ]]; then
+    if [[ ${os_version} -lt 11 ]]; then
+        echo -e "${red} Please use elementary 6 or higher ${plain}\n" && exit 1
+    fi
 elif [[ "${release}" == "almalinux" ]]; then
     if [[ ${os_version} -lt 9 ]]; then
         echo -e "${red} Please use AlmaLinux 9 or higher ${plain}\n" && exit 1
@@ -94,13 +98,14 @@ else
     echo "- Rocky Linux 9+"
     echo "- Oracle Linux 8+"
     echo "- OpenSUSE Tumbleweed"
+    echo "-elementary OS 6+"
     exit 1
 
 fi
 
 install_base() {
     case "${release}" in
-    ubuntu | debian | armbian)
+    ubuntu | debian | armbian | elementary )
         apt-get update && apt-get install -y -q wget curl tar tzdata
         ;;
     centos | almalinux | rocky | oracle)
